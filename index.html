@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER-DECK // GAME DEV PORTFOLIO & ARCHIVE</title>
+  <!-- Link connection to your external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- THE CYBER-DECK HARDWARE CONTAINER -->
+  <main class="cyber-deck-frame crt-monitor">
+    
+    <!-- LEFT PILLAR: SCHEMATIC DIRECTORY -->
+    <section class="deck-column">
+      <div class="panel-block" style="flex: 1;">
+        <div class="panel-header neon-pulse">// SYSTEM_ARCHIVE</div>
+        <ul class="nav-list">
+          <li>
+            <button class="deck-node active-node" data-url="about:blank" data-video="" data-title="SYS_BOOT" data-engine="N/A" data-role="SYSTEM OPERATOR" data-timeline="PERMANENT" data-desc="DECK ONLINE. AWAITING CORE INJECTION PROTOCOLS.">
+              DECK_BOOT.EXE
+            </button>
+          </li>
+          <li>
+            <!-- REPLACE DATA-URL WITH ITCH.IO WEB EMBED CODE & DATA-VIDEO WITH YOUR DIRECT MP4 TRAILER LINK -->
+            <button class="deck-node" 
+                    data-url="https://itch.zone" 
+                    data-video="https://w3schools.com" 
+                    data-title="PROJECT_NEON" 
+                    data-engine="GODOT 4.2" 
+                    data-role="LEAD GAMEPLAY PROGRAMMER" 
+                    data-timeline="3 WEEKS"
+                    data-desc="An intense neon physics rogue-like layout. Programmed procedural generation algorithms alongside customized enemy state-machine AI patterns. Fixed a performance memory leak with object pooling.">
+              PROJECT_NEON.WASM
+            </button>
+          </li>
+          <li>
+            <button class="deck-node" 
+                    data-url="https://itch.zone" 
+                    data-video="https://w3schools.com" 
+                    data-title="GRID_RUNNER" 
+                    data-engine="UNITY 2023" 
+                    data-role="SOLO TECHNICAL DESIGNER" 
+                    data-timeline="2 MONTHS"
+                    data-desc="Fast-paced cyberpunk movement trial sandbox engine. Implemented predictive custom raycast systems for hitboxes and modular UI inventory data nodes. Managed frame metrics down to 2ms layout overhead loops.">
+              GRID_RUNNER.WASM
+            </button>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="panel-block" style="height: 140px;">
+        <div class="panel-header">// COMMS_NODE</div>
+        <button class="deck-node" onclick="window.location.href='mailto:your-email@domain.com'" style="width:100%; text-align:center;">
+          CONNECT_NET_LINK
+        </button>
+      </div>
+    </section>
+
+    <!-- CENTER PILLAR: ARCADE DISPLAY SCREEN -->
+    <section class="deck-column">
+      <div class="arcade-viewport">
+        <div class="viewport-telemetry">
+          <span id="deck-display-mode">HOST_DRIVE: READY</span>
+          <span id="runtime-status">STATE: IDLE // AWAITING DRIVE RUN</span>
+        </div>
+        
+        <!-- Desktop Mode WebGL Container -->
+        <div id="desktopWebglView">
+          <iframe id="cyberDeckViewscreen" class="viewscreen-frame desktop-only-screen" src="about:blank" allow="autoplay; fullscreen; gamepad"></iframe>
+        </div>
+
+        <!-- Mobile Backup Video Layout Fallback -->
+        <div id="mobileVideoView" class="mobile-only-screen-fallback">
+          <video id="cyberDeckMobileVideo" loop muted playsinline controls>
+            <source id="mobileVideoSource" src="" type="video/mp4">
+            TERMINAL ERROR: VIDEO HARDWARE BYPASS BLOCKED.
+          </video>
+          <div class="mobile-warning-text">// MOBILE AUTOMATIC CONSOLE SAFE-MODE // INTERACTIVE DESKTOP WASM CORE BYPASS ACTIVE</div>
+        </div>
+
+        <!-- Dynamic Case Study Trigger -->
+        <button id="inspectCaseStudyBtn" class="deck-node" style="margin-top:10px; border-color:var(--neon-pink); color:var(--neon-pink); display:none; text-align:center;">
+          ACCESS_PROJECT_DIAGNOSTICS_LOG
+        </button>
+      </div>
+    </section>
+
+    <!-- RIGHT PILLAR: COMPUTATION METRICS -->
+    <section class="deck-column">
+      <div class="panel-block" style="height: 180px;">
+        <div class="panel-header">// CORE_METRICS</div>
+        <div class="stat-row"><span class="stat-label">DECK_OS:</span><span class="stat-value">v9.2.26</span></div>
+        <div class="stat-row"><span class="stat-label">CORE_TEMP:</span><span class="stat-value">39°C</span></div>
+        <div class="stat-row"><span class="stat-label">MEMORY:</span><span class="stat-value">84% ALLOC</span></div>
+        <div class="stat-row"><span class="stat-label">WASM_BUFFER:</span><span class="stat-value" id="wasm-buffer-stat">0.00 MB</span></div>
+      </div>
+
+      <div class="panel-block" style="flex: 1;">
+        <div class="panel-header">// LOG_STREAM</div>
+        <div class="telemetry-stream" id="logStreamOutput">
+          [SYS_LOG] System framework initialization: COMPLETE.<br>
+          [SYS_LOG] Core execution cluster array: ONLINE.<br>
+          [SYS_LOG] Terminal tracking network parameters...<br>
+        </div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC CASE STUDY NEON POP-UP INTERFACE -->
+    <div class="cyber-overlay-container" id="cyberCaseStudyModal">
+      <div class="cyber-dashboard-box">
+        <button class="close-cyber-deck-btn" id="closeModalBtn">[TERMINATE_SESSION X]</button>
+        <div class="panel-header neon-pulse" id="modalProjectTitle" style="color:var(--neon-pink); border-color:var(--neon-pink); font-size:18px;">// CASE_STUDY_LOG</div>
+        
+        <div class="dashboard-grid-content">
+          <div class="dashboard-metric-panel">
+            <div class="panel-header">// ARCHITECTURE_SPECS</div>
+            <div class="spec-pill"><strong>ENGINE:</strong> <span id="modalSpecEngine">-</span></div>
+            <div class="spec-pill" style="margin: 8px 0;"><strong>ROLE:</strong> <span id="modalSpecRole">-</span></div>
+            <div class="spec-pill"><strong>TIMELINE:</strong> <span id="modalSpecTimeline">-</span></div>
+          </div>
+          
+          <div class="dashboard-text-panel">
+            <div class="panel-header">// SYSTEM_POST_MORTEM</div>
+            <p id="modalProjectSummary" style="font-size:13px; line-height:1.6; color:var(--neon-cyan);"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Connection to your external JavaScript execution engine -->
+  <script src="app.js"></script>
+</body>
+</html>
