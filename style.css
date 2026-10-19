@@ -296,6 +296,55 @@ body {
   }
 }
 
+/* --- ABOUT INTERIOR GRID ARCHITECTURE --- */
+.about-terminal-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  overflow-y: auto;
+  height: 100%;
+  color: var(--neon-cyan);
+}
+
+.about-bio-text {
+  font-size: 13px;
+  line-height: 1.6;
+  border-bottom: 1px dashed var(--matrix-dim);
+  padding-bottom: 15px;
+}
+
+.skills-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.skills-category {
+  border: 1px solid var(--matrix-dim);
+  padding: 12px;
+  background-color: rgba(7, 7, 12, 0.5);
+}
+
+.skills-category-title {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--neon-pink);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.skills-tags {
+  font-size: 12px;
+  color: #a5b5c7;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .skills-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+}
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg-void); }
 ::-webkit-scrollbar-thumb { background: var(--matrix-dim); }

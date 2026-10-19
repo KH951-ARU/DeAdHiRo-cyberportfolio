@@ -46,8 +46,68 @@ document.addEventListener("DOMContentLoaded", () => {
       logStream.innerHTML += `[EXEC] Querying workspace node [${currentActiveData.title}]...<br>`;
       logStream.scrollTop = logStream.scrollHeight;
 
+      const isAboutNode = node.classList.contains('about-me-node');
+
+      if (isAboutNode) {
+        desktopViewscreen.src = "about:blank";
+        mobileVideo.pause();
+        videoSource.src = "";
+
+        displayMode.innerText = "HOST_DRIVE: SYSTEM_INFO";
+        runtimeStatus.innerText = "READING: ABOUT_ME.SYS // OK";
+        runtimeStatus.style.color = "var(--neon-green)";
+        wasmBufferStat.innerText = "1.04 MB";
+
+        inspectBtn.style.display = "block";
+        inspectBtn.innerText = "ACCESS_FULL_DOSSIER";
+
+        const webglContainer = document.getElementById('desktopWebglView');
+        const existingAboutLayout = webglContainer.querySelector('.about-terminal-layout');
+        if (existingAboutLayout) {
+          existingAboutLayout.remove();
+        }
+
+        desktopViewscreen.style.display = 'none';
+        webglContainer.insertAdjacentHTML('beforeend', `
+          <div class="about-terminal-layout">
+            <p class="about-bio-text">${currentActiveData.desc}</p>
+
+            <div class="panel-header" style="border-color: var(--neon-pink); color: var(--neon-pink);">// TECH_STACK_MATRICES</div>
+
+            <div class="skills-matrix-grid">
+              <div class="skills-category">
+                <div class="skills-category-title">> SYSTEMS_&_ENGINES</div>
+                <div class="skills-tags">Unity 3D / Godot 4.x / Unreal Engine 5 / WebGL</div>
+              </div>
+              <div class="skills-category">
+                <div class="skills-category-title">> LOGIC_LANGUAGES</div>
+                <div class="skills-tags">C# / C++ / JavaScript / GLSL Shaders</div>
+              </div>
+              <div class="skills-category">
+                <div class="skills-category-title">> PRODUCTION_TOOLS</div>
+                <div class="skills-tags">Git Source Control / Blender / FMOD / Jira</div>
+              </div>
+              <div class="skills-category">
+                <div class="skills-category-title">> DESIGN_SPECIALTIES</div>
+                <div class="skills-tags">Gameplay Systems / AI Behaviors / Greybox Layouts</div>
+              </div>
+            </div>
+          </div>
+        `);
+
+        logStream.innerHTML += `[SUCCESS] ABOUT_ME.SYS profile rendered successfully.<br>`;
+        logStream.scrollTop = logStream.scrollHeight;
+        return;
+      }
+
       if (currentActiveData.url === "about:blank") {
         // Reset console workspace
+        const webglContainer = document.getElementById('desktopWebglView');
+        const aboutLayout = webglContainer.querySelector('.about-terminal-layout');
+        if (aboutLayout) {
+          aboutLayout.remove();
+        }
+        desktopViewscreen.style.display = 'block';
         desktopViewscreen.src = "about:blank";
         mobileVideo.pause();
         videoSource.src = "";
@@ -59,6 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
         wasmBufferStat.innerText = "0.00 MB";
         inspectBtn.style.display = "none";
       } else {
+        const webglContainer = document.getElementById('desktopWebglView');
+        const aboutLayout = webglContainer.querySelector('.about-terminal-layout');
+        if (aboutLayout) {
+          aboutLayout.remove();
+        }
+        desktopViewscreen.style.display = 'block';
+
         runtimeStatus.innerText = "COMPILING WASM CORE PACKETS...";
         runtimeStatus.style.color = "var(--neon-pink)";
         
