@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="skills-matrix-grid">
               <div class="skills-category">
                 <div class="skills-category-title">> SYSTEMS_&_ENGINES</div>
-                <div class="skills-tags"> Godot 4.x / Unreal Engine 5 / WebGL</div>
+                <div class="skills-tags">Godot 4.x / Unreal Engine 5 / WebGL</div>
               </div>
               <div class="skills-category">
                 <div class="skills-category-title">> LOGIC_LANGUAGES</div>
