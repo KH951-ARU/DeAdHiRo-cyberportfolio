@@ -77,15 +77,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="skills-matrix-grid">
               <div class="skills-category">
                 <div class="skills-category-title">> SYSTEMS_&_ENGINES</div>
-                <div class="skills-tags">Unity 3D / Godot 4.x / Unreal Engine 5 / WebGL</div>
+                <div class="skills-tags"> Godot 4.x / Unreal Engine 5 / WebGL</div>
               </div>
               <div class="skills-category">
                 <div class="skills-category-title">> LOGIC_LANGUAGES</div>
-                <div class="skills-tags">C# / C++ / JavaScript / GLSL Shaders</div>
+                <div class="skills-tags">GDscript / JavaScript / GLSL Shaders</div>
               </div>
               <div class="skills-category">
                 <div class="skills-category-title">> PRODUCTION_TOOLS</div>
-                <div class="skills-tags">Git Source Control / Blender / FMOD / Jira</div>
+                <div class="skills-tags">Git Source Control / Blender / Trello</div>
               </div>
               <div class="skills-category">
                 <div class="skills-category-title">> DESIGN_SPECIALTIES</div>
